@@ -20,6 +20,7 @@ try:
     
     client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"),)
     aclient = AsyncOpenAI(api_key=os.environ.get("OPENAI_API_KEY"),)
+    openai.api_key = os.environ.get("OPENAI_API_KEY")
     from openai import OpenAIError
 except ImportError:
     is_openai_available = False
